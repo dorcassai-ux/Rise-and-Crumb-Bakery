@@ -52,4 +52,4 @@ The site is static: no server-side code, logins or stored orders. These are plan
 
 ## Documentation
 
-See [Bakery_S3_CloudFront_Documentation.docx](Bakery_S3_CloudFront_Documentation.docx) for the full step-by-step guide.
+See [Bakery_S3_CloudFront_Documentation.docx](Bakery_S3_CloudFront_Documentation.pdf) for the full step-by-step guide.
