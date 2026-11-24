@@ -2,7 +2,6 @@
 
 A static bakery website (HTML, CSS, JavaScript) hosted on **Amazon S3** and delivered through **Amazon CloudFront**.
 
-**Live site:** https://d12jppejux9oyw.cloudfront.net
 
 ![Rise & Crumb website](screenshots/02-website-live.png)
 
