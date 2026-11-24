@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rise &amp; Crumb Bakery | Fresh bread, pastries and cakes</title>
+  <meta name="description" content="Small-batch bread, pastries and custom cakes, baked fresh every morning. Order online for pickup or delivery.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip" href="#menu">Skip to menu</a>
+
+  <header class="site-header" id="top">
+    <div class="wrap bar">
+      <a class="logo" href="#top" aria-label="Rise &amp; Crumb home">Rise <span>&amp;</span> Crumb</a>
+
+      <nav id="nav" class="nav" aria-label="Main">
+        <a href="#menu">Menu</a>
+        <a href="#about">Our story</a>
+        <a href="#order">Custom orders</a>
+        <a href="#visit">Visit</a>
+      </nav>
+
+      <div class="bar-actions">
+        <button class="cart-btn" id="cartOpen" aria-label="Open basket">
+          Basket <span class="count" id="cartCount">0</span>
+        </button>
+        <button class="burger" id="burger" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <p class="status" id="openStatus">Checking hours…</p>
+          <h1>Baked before sunrise.<br>Gone by lunch.</h1>
+          <p class="lead">Small-batch bread, flaky pastries and celebration cakes, made by hand every morning with real butter and slow dough.</p>
+          <div class="hero-cta">
+            <a class="btn btn-primary" href="#menu">Order for pickup</a>
+            <a class="btn btn-ghost" href="#order">Request a custom cake</a>
+          </div>
+        </div>
+
+        <aside class="board" aria-label="Today's bake">
+          <h2>Out of the oven today</h2>
+          <ul id="todayList"></ul>
+          <p class="board-note">Sold out items are marked on the menu.</p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section" id="menu">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>The menu</h2>
+          <p>Add items to your basket, then send your order straight to us.</p>
+        </div>
+
+        <div class="filters" id="filters" role="tablist" aria-label="Menu categories"></div>
+        <div class="grid" id="menuGrid" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section class="section alt" id="about">
+      <div class="wrap about">
+        <div>
+          <h2>Our story</h2>
+          <p>Rise &amp; Crumb started in a home kitchen with one oven and a jar of sourdough starter. Today we are still a small team, still mixing by hand, and still baking everything the same morning we sell it.</p>
+          <p>We use local flour where we can, real butter, and no preservatives. If it is not fresh, it does not go on the shelf.</p>
+        </div>
+        <ul class="facts">
+          <li><strong>4 a.m.</strong> first oven lit</li>
+          <li><strong>48 hrs</strong> sourdough fermentation</li>
+          <li><strong>0</strong> preservatives</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" id="order">
+      <div class="wrap order">
+        <div class="section-head">
+          <h2>Custom cake requests</h2>
+          <p>Tell us what you are celebrating. We reply within one working day with a quote.</p>
+        </div>
+
+        <form id="orderForm" novalidate>
+          <div class="field">
+            <label for="name">Your name</label>
+            <input id="name" name="name" type="text" autocomplete="name" required>
+            <small class="error" data-for="name"></small>
+          </div>
+          <div class="field">
+            <label for="phone">Phone number</label>
+            <input id="phone" name="phone" type="tel" autocomplete="tel" required>
+            <small class="error" data-for="phone"></small>
+          </div>
+          <div class="field">
+            <label for="date">Date needed</label>
+            <input id="date" name="date" type="date" required>
+            <small class="error" data-for="date"></small>
+          </div>
+          <div class="field">
+            <label for="size">Size</label>
+            <select id="size" name="size" required>
+              <option value="">Choose a size</option>
+              <option>Small (serves 6–8)</option>
+              <option>Medium (serves 12–15)</option>
+              <option>Large (serves 20–30)</option>
+              <option>Tiered (serves 40+)</option>
+            </select>
+            <small class="error" data-for="size"></small>
+          </div>
+          <div class="field full">
+            <label for="details">Flavour, theme and other details</label>
+            <textarea id="details" name="details" rows="4" required></textarea>
+            <small class="error" data-for="details"></small>
+          </div>
+          <div class="full">
+            <button class="btn btn-primary" type="submit">Send request</button>
+            <p class="form-msg" id="formMsg" role="status"></p>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <section class="section alt" id="visit">
+      <div class="wrap visit">
+        <div>
+          <h2>Visit us</h2>
+          <p>12 Baker Street, Your Town<br><a href="tel:+10000000000">+1 000 000 0000</a><br><a href="mailto:hello@riseandcrumb.com">hello@riseandcrumb.com</a></p>
+        </div>
+        <table class="hours" aria-label="Opening hours">
+          <tbody>
+            <tr><th scope="row">Mon – Fri</th><td>7:00 am – 6:00 pm</td></tr>
+            <tr><th scope="row">Saturday</th><td>7:00 am – 4:00 pm</td></tr>
+            <tr><th scope="row">Sunday</th><td>8:00 am – 1:00 pm</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>&copy; <span id="year"></span> Rise &amp; Crumb Bakery. All rights reserved.</p>
+      <a href="#top">Back to top</a>
+    </div>
+  </footer>
+
+  <!-- Basket drawer -->
+  <div class="overlay" id="overlay" hidden></div>
+  <aside class="drawer" id="drawer" aria-label="Your basket" aria-hidden="true">
+    <div class="drawer-head">
+      <h2>Your basket</h2>
+      <button class="close" id="cartClose" aria-label="Close basket">&times;</button>
+    </div>
+    <ul class="cart-list" id="cartList"></ul>
+    <div class="drawer-foot">
+      <div class="total"><span>Total</span><strong id="cartTotal">0.00</strong></div>
+      <button class="btn btn-primary block" id="checkout">Send order on WhatsApp</button>
+      <button class="link-btn" id="clearCart">Empty basket</button>
+    </div>
+  </aside>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
